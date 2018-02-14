@@ -178,7 +178,8 @@ const applyFormat = function (ed, name, vars?, node?) {
 
         // Is it valid to wrap this item
         // TODO: Break this if up, too complex
-        if (contentEditable && !hasContentEditableState && FormatUtils.isValid(ed, wrapName, nodeName) && FormatUtils.isValid(ed, parentName, wrapName) &&
+        // HACK: Removing the disabling of the formatting on non content editable sections
+        if (/*contentEditable && !hasContentEditableState && */FormatUtils.isValid(ed, wrapName, nodeName) && FormatUtils.isValid(ed, parentName, wrapName) &&
           !(!nodeSpecific && node.nodeType === 3 &&
             node.nodeValue.length === 1 &&
             node.nodeValue.charCodeAt(0) === 65279) &&

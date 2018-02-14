@@ -35,7 +35,6 @@ mentions
 *.full.js
 *.min.css
 *.dev.less
-**/dist
 **/scratch
 **/lib
 **/dependency
